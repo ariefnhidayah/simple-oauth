@@ -17,7 +17,7 @@ app.get('/auth', (req, res) => {
   );
 });
 
-app.get('/oauth-callback', ({ query: { code } }, res) => {
+app.get('/callback', ({ query: { code } }, res) => {
   const body = {
     client_id: process.env.GITHUB_CLIENT_ID,
     client_secret: process.env.GITHUB_SECRET,
